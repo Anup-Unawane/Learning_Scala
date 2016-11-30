@@ -1,0 +1,74 @@
+C:\Users\anup>scala -version
+Scala code runner version 2.11.8 -- Copyright 2002-2016, LAMP/EPFL
+
+C:\Users\anup>scalac -version
+Scala compiler version 2.11.8 -- Copyright 2002-2016, LAMP/EPFL
+
+C:\Users\anup>scala
+Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.7.0_60).
+Type in expressions for evaluation. Or try :help.
+
+scala> val msg = "Hello World!!!"
+msg: String = Hello World!!!
+
+scala> msg = "Hello Scala!!!"
+<console>:12: error: reassignment to val
+       msg = "Hello Scala!!!"
+           ^
+
+scala> println(msg)
+Hello World!!!
+
+scala>
+
+scala>
+
+scala> val op =
+     |
+     |
+You typed two blank lines.  Starting a new command.
+
+scala> val op = "this is realy long textxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+op: String = this is realy long textxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+scala>
+
+scala> val multiline =
+     |  "mutli line text"
+multiline: String = mutli line text
+
+scala>
+
+scala> def max(x:Int, y:Int):Int={
+     | if(x>y) x
+     | else y
+     | }
+max: (x: Int, y: Int)Int
+
+scala> def max2(x:Int, y:Int) = if(x > y)x else y
+max2: (x: Int, y: Int)Int
+
+scala> max(3,5)
+res1: Int = 5
+
+scala> max2(2,3)
+res2: Int = 3
+
+scala> res1 + res2
+res3: Int = 8
+
+scala> def greet() = println(msg)
+greet: ()Unit
+
+scala> greet()
+Hello World!!!
+
+scala> :q
+
+C:\Users\anup>
