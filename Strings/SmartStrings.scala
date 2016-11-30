@@ -24,3 +24,26 @@ println("\nREgEx using smart string")
 //Note here: Slashes are not required to escape for smart strings. 
 val smartRegEx = """(\s|[0-9])?[0-9]:[0-5][0-9]|\s*(AM|PM)""".r 
 println(smartRegEx.findAllIn(timeMsg).toList)
+
+/**
+Sample Output
+
+E:\Courses\scala\scripts>scala SmartStrings.scala
+This is multiline String or smart String using defautl pipe char as margin
+ This is line 2
+ This is line3
+ This is line 4.
+
+ This is multiline String or smart String using at the rate char as margin
+ This is line 2
+ This is line3
+ This is line 4.
+
+REgEx using simple string
+List(12:30, PM,  1:15, AM,  5:30, PM)
+
+REgEx using smart string
+List(12:30, PM,  1:15, AM,  5:30, PM)
+
+
+**/
