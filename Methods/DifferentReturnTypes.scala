@@ -13,6 +13,9 @@ def add(x:Int, y:Int) = if(x > 10) (x+y).toString else x + y
 
 println(add(11 , 2))
 
+/* After printing 123, outer println will print () i.e. Unit. Similar to void in Java.
+Unit is subclass of scala.AnyVal  */
+println(println(123))
 
 /** 
 Sample Output:
