@@ -20,3 +20,17 @@ println()
 //f interpolator also works with smart string
 println(f"""Ticket Cost for movie $movie%s is $$$ticketCost%1.2f 
 			|that is $incr%% increment from last week.""".stripMargin)
+
+/**  
+Sample Output
+E:\Courses\scala\scripts>scala StringInterpolator.scala
+99 birds flying in the sky
+104 insects flying in the air
+Ticket Cost for movie Inferno is $50.00
+Ticket Cost for movie Inferno is $50.00
+ that is 25% increment from last week.
+
+Ticket Cost for movie Inferno is $50.00
+that is 25% increment from last week.
+	
+*/
