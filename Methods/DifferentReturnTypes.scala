@@ -22,6 +22,8 @@ Sample Output:
 
 E:\Courses\scala\scripts>scala DifferentReturnTypes.scala
 13
+123
+()
 
 E:\Courses\scala\scripts>scala
 Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_92).
