@@ -4,7 +4,12 @@
 	2. Type inferencer inferred wrong type
 	3. Method will be called recursively
 	4. Method is overloaded
+
+*. Methods are not functions
+*. Return Keyword in unnecessary
+*. Last evaluated statement will be returned
 */
+
 def add(x:Int, y:Int):Int =
 {
 	return x + y
