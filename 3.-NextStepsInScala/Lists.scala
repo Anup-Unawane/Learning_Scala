@@ -49,3 +49,51 @@ thrill.foreach(print)				// same as above. but more consice
 println()
 
 println("first element :" + thrill.head)	//gives first element in list
+
+println("LAst element :" + thrill.last)	//gives last element in list
+
+println("All initial elements in list::" + thrill.init) 	//Returns a new list containing all but last element
+
+println("All last elements in list::" + thrill.tail)		   //Returns a new list containing all but first element
+
+println("Is List empty:" + thrill.isEmpty)			//Checks list is empty or not
+
+println("Size of List:" + thrill.length)		//Size of list
+
+println("New list with modification:" + thrill.map(s => s + "y"))		//Appends y to each element in list (for this operation). Actually executes an operation on each element in list & returns resultant elements with new list.
+
+println(" String representation:" + thrill.mkString("~~"))			//Returns a string will all elements in list seperated by given string(here ~~). 
+
+println("List reversal::" + thrill.reverse)				//Reversing list
+
+println("Sorted List:" + thrill.sortWith(_ < _))	//Sorted list
+
+
+/**Sample Output
+
+D:\Projects\Scala\Chapter3>scala Lists.scala
+List(1, 2) AND List(3, 4) Are not changed
+New list is generated as::List(1, 2, 3, 4)
+List(1, 2, 3)
+paramList:List(cool, tool, rule)
+thrill:List(will, fill, untill)
+thrill(2) :untill
+No.of elements in list thrill who has length 4 : 2
+New list after removing first 2 elements:List(untill)
+New list after removing last 2 elements:List(will)
+check if untill exists in list:true
+New list with all strings having length 4:List(will, fill)
+Checks whether all elements in list end with character l: true
+willfilluntillwillfilluntill
+first element :will
+LAst element :untill
+All initial elements in list::List(will, fill)
+All last elements in list::List(fill, untill)
+Is List empty:false
+Size of List:3
+New list with modification:List(willy, filly, untilly)
+ String representation:will~~fill~~untill
+List reversal::List(untill, fill, will)
+Sorted List:List(fill, untill, will)
+
+**/
