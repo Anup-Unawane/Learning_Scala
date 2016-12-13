@@ -1,0 +1,32 @@
+Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_92).
+Type in expressions for evaluation. Or try :help.
+
+scala> def `Summation of`(x:Int, y:Int) = x + y
+Summation$u0020of: (x: Int, y: Int)Int
+
+scala> Summation of (5, 4)
+<console>:12: error: not found: value Summation
+       Summation of (5, 4)
+       ^
+
+scala> `Summation of`(5, 4)
+res0: Int = 9
+
+scala> def doWeLikeScala_? = true
+doWeLikeScala_$qmark: Boolean
+
+scala> val status = if(doWeLikeScala_?) "Yesss!!!" else "Noooo!!!"
+status: String = Yesss!!!
+
+scala> def `return`(x:Double, y:Double) = (x + y + 4.5).toString
+return: (x: Double, y: Double)String
+
+scala> val g = return(2.3, 4.5)
+<console>:11: error: return outside method definition
+       val g = return(2.3, 4.5)
+               ^
+
+scala> val g = `return`(2.3, 4.5)
+g: String = 11.3
+
+scala>
