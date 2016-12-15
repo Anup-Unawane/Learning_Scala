@@ -14,7 +14,8 @@ object CheckSummer
 	def main(args : Array[String])
 	{
 		for(arg <- args)
-			println("Checksum for " + arg + " : " + calculate(arg))
+			println("Checksum for " + arg + " : " + calculate(arg))	//If ChecksumAccumulator is imported , you can use ChecksumAccumulator.calculate(arg)
+
 	}
 }
 
