@@ -5,6 +5,8 @@ println("LastName:" + emp1.lastName)
 emp1.lastName = "Babbar"
 println("Modified LastName :" + emp1.lastName)
 
+println("title:" + emp1.title)
+
 /**
   *Sample output
   *
@@ -40,6 +42,18 @@ FirstName:Gabbar
 LastName:Singh
 Modified LastName :Babbar
 
+
+  ---After adding title parameter to constructor
+E:\Courses\scala\IntellijIDEA\src>scalac Employee.scala
+
+E:\Courses\scala\IntellijIDEA\src>scala -cp . EmployeeScript.scala
+Multiline constructor block!!
+FirstName:Gabbar
+LastName:Singh
+Modified LastName :Babbar
+title:Programmer
+
 E:\Courses\scala\IntellijIDEA\src>
+
 
   */
