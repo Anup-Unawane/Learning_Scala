@@ -7,10 +7,12 @@ import scala.beans.BeanProperty
   *
   *   call another constructor by invoking this
   *
+  *   Scala does not have Checked Exceptions. All Exceptions are unchecked in scala, even SQLException and IOException
+  *
   */
 class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:String, @BeanProperty val title:String)      //This is default constructor
 {
-  require(firstName.nonEmpty, "First Name cannot be empty!!")     //preconditions using require
+  require(firstName.nonEmpty, "First Name cannot be empty!!")     //preconditions using require. If not met, will throw IllegalArgumentException
   require(lastName.nonEmpty, "Last Name cannot be empty!!")
   require(title.nonEmpty, "Title cannot be empty!!")
 
