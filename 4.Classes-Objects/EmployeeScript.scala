@@ -7,6 +7,23 @@ println("Modified LastName :" + emp1.lastName)
 
 println("title:" + emp1.title)
 
+try {
+  val emp2 = new Employee("Dennis", "", "C Programmer")
+}catch{
+  case iae:IllegalArgumentException => println(iae.getMessage)
+}finally {
+  println("Continuing with program")
+}
+
+try {
+  val emp2 = new Employee("Dennis", "Ritchie", "Senior C Programmer")
+}catch{
+  case iae:IllegalArgumentException => println(iae.getMessage)
+  case th:Throwable  => println("Exception caught!!" + th.getMessage) 
+}finally {
+  println("Continuing with program")
+}
+
 /**
   *Sample output
   *
@@ -53,7 +70,18 @@ LastName:Singh
 Modified LastName :Babbar
 title:Programmer
 
-E:\Courses\scala\IntellijIDEA\src>
+  ---After handling Exceptions using Try Catch
+E:\Courses\scala\IntellijIDEA\src>scala EmployeeScript.scala
+Multiline constructor block!!
+FirstName:Gabbar
+LastName:Singh
+Modified LastName :Babbar
+title:Programmer
+requirement failed: Last Name cannot be empty!!
+Continuing with program
+Title cannot contain Senior or Junior!!
+Continuing with program
+
 
 
   */
