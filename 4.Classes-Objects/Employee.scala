@@ -9,6 +9,9 @@ import scala.beans.BeanProperty
   *
   *   Scala does not have Checked Exceptions. All Exceptions are unchecked in scala, even SQLException and IOException
   *
+  *   extends keyword is used to subclass a class
+  *   You can have multiple public classes in one file
+  *
   */
 class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:String, @BeanProperty val title:String)      //This is default constructor
 {
@@ -23,3 +26,9 @@ class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:S
   def this(firstName:String, lastName:String ) = {this(firstName, lastName, "Programmer")     //if constructor block is multiline, First call must be this
                                                   println("Multiline constructor block!!")}
 }
+
+class Department(val name:String)
+
+class Manager(firstName:String, lastName:String, title:String, val department:Department) extends
+          Employee(firstName, lastName, title)
+
