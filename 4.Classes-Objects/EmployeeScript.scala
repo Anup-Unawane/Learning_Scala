@@ -19,10 +19,17 @@ try {
   val emp2 = new Employee("Dennis", "Ritchie", "Senior C Programmer")
 }catch{
   case iae:IllegalArgumentException => println(iae.getMessage)
-  case th:Throwable  => println("Exception caught!!" + th.getMessage) 
+  case th:Throwable  => println("Exception caught!!" + th.getMessage)  //This will caught everything including OutofMemoryError and others that can terminate JVM
 }finally {
   println("Continuing with program")
 }
+
+
+//AFter making changes for DepartMent and Maanger
+val dept = new Department("Computer Science")
+
+val mgr = new Manager("Alan", "Turing", "Mathematician", dept)
+println("Department:" + mgr.department.name)
 
 /**
   *Sample output
@@ -83,5 +90,17 @@ Title cannot contain Senior or Junior!!
 Continuing with program
 
 
+----------------After adding classses for DepartMent and Manager
+  E:\Courses\scala\IntellijIDEA\src>scala EmployeeScript.scala
+Multiline constructor block!!
+FirstName:Gabbar
+LastName:Singh
+Modified LastName :Babbar
+title:Programmer
+requirement failed: Last Name cannot be empty!!
+Continuing with program
+Title cannot contain Senior or Junior!!
+Continuing with program
+Department:Computer Science
 
   */
