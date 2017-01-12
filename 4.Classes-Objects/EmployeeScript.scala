@@ -31,6 +31,11 @@ val dept = new Department("Computer Science")
 val mgr = new Manager("Alan", "Turing", "Mathematician", dept)
 println("Department:" + mgr.department.name)
 
+println("Full Name:" + mgr.fullName)
+
+val cpyMgr = mgr.copy(title="Encryption")
+println("Copied Manager: "  + cpyMgr.fullName + "-" + cpyMgr.title)
+
 /**
   *Sample output
   *
@@ -102,5 +107,21 @@ Continuing with program
 Title cannot contain Senior or Junior!!
 Continuing with program
 Department:Computer Science
+
+--------------After adding changes for method overriding
+  E:\Courses\scala\IntellijIDEA\src>scala -nc EmployeeScript.scala
+Multiline constructor block!!
+FirstName:Gabbar
+LastName:Singh
+Modified LastName :Babbar
+title:Programmer
+requirement failed: Last Name cannot be empty!!
+Continuing with program
+Title cannot contain Senior or Junior!!
+Continuing with program
+Department:Computer Science
+Full Name:Alan Turing, Computer Science, Manager
+Copied Manager: Alan Turing, Toys, Manager-Encryption
+
 
   */
