@@ -12,6 +12,8 @@ import scala.beans.BeanProperty
   *   extends keyword is used to subclass a class
   *   You can have multiple public classes in one file
   *
+  *   override keyword is mandatory for method overriding
+  *
   */
 class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:String, @BeanProperty val title:String)      //This is default constructor
 {
@@ -25,10 +27,23 @@ class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:S
   //Another constructor
   def this(firstName:String, lastName:String ) = {this(firstName, lastName, "Programmer")     //if constructor block is multiline, First call must be this
                                                   println("Multiline constructor block!!")}
+
+  def fullName = s"$firstName $lastName"
+
+  def copy(firstName:String = this.firstName, lastName:String=this.lastName, title:String=this.title):Employee =
+  {
+    new Employee(firstName,lastName, title)
+  }
 }
 
 class Department(val name:String)
 
 class Manager(firstName:String, lastName:String, title:String, val department:Department) extends
-          Employee(firstName, lastName, title)
+          Employee(firstName, lastName, title) {
+  override def fullName = s"$firstName $lastName, ${department.name}, Manager"
+
+  override def copy(firstName: String = this.firstName, lastName: String = this.lastName, title: String = this.title): Manager = {
+    new Manager(firstName, lastName, title, new Department("Toys"))
+  }
+}
 
