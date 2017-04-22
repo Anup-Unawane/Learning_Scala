@@ -6,8 +6,14 @@ val cplStringCplIntDouble = Couple("Scala", Couple(12, 3.14))   //Couple[String,
 
 println("Pi value is: " + cplStringCplIntDouble.second.second)
 
+val empCpl = Couple(new Employee("Johnny", "English"), new Employee("James", "Bond"))
+println(empCpl)
+println(empCpl.swap)
+
 /**
     Sample Output
 scala -nc CoupleScript.scala
 Pi value is: 3.14
+Couple(Employee(Johnny, English, Programmer),Employee(James, Bond, Programmer))
+Couple(Employee(James, Bond, Programmer),Employee(Johnny, English, Programmer))
 */
