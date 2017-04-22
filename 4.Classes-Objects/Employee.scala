@@ -59,7 +59,10 @@ class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:S
   override def toString = s"Employee($firstName, $lastName, $title)"
 }
 
-class Department(val name:String)
+case class Department(name:String)
+{
+    override def toString = s"Department: $name"    //you can override default toString implementation
+}
 
 class Manager(firstName:String, lastName:String, title:String, val department:Department) extends
           Employee(firstName, lastName, title) {

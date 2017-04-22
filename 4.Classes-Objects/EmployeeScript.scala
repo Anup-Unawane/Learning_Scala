@@ -51,6 +51,25 @@ println("Hashcode equality:" + (emp2.hashCode == emp3.hashCode)) //true
 println("Hashcode:" + emp2.hashCode)
 
 println("ToString:" + emp2)
+
+
+//Case classes for Department
+val toys = /*new*/ Department("Toys")   //Since Department is case class, you can skip new keyword
+println("toString:" + toys)   //toString method is by default implemented for case classes
+
+val toys2 = Department("Toys")
+println("Object Equality Department :" + (toys == toys2))
+println("hashCode Equality Department :" + (toys.hashCode == toys2.hashCode))
+
+//PAttern Matching for case classes
+val name = toys match {
+            case Department(n) => n
+            case _ => "Unknown"
+            }
+println(s"Name has value received is: $name")
+
+val Department(name2) = toys
+println(s"Name2 has value received is: $name2")
 /**
   *Sample output
   *
@@ -143,5 +162,11 @@ Object reference comparison:false
 Hashcode equality:true
 Hashcode:-1813557963
 ToString:Employee(Gabbar, Singh, Programmer)
+
+toString:Department: Toys
+Object Equality Department :true
+hashCode Equality Department :true
+Name has value received is: Toys
+Name2 has value received is: Toys
 
   */
