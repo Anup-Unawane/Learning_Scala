@@ -36,6 +36,21 @@ println("Full Name:" + mgr.fullName)
 val cpyMgr = mgr.copy(title="Encryption")
 println("Copied Manager: "  + cpyMgr.fullName + "-" + cpyMgr.title)
 
+//equals method 
+val emp2 = new Employee("Gabbar", "Singh")
+val emp3 = new Employee("Gabbar", "Singh")
+
+/* ==  operator is used for equals method 
+    eq operator is used for comparing object whether 
+    both objects are referring to same object or not
+*/
+
+println("Object equality: " + (emp2 == emp3))   //true
+println("Object reference comparison:" + (emp2 eq emp3))   //false
+println("Hashcode equality:" + (emp2.hashCode == emp3.hashCode)) //true
+println("Hashcode:" + emp2.hashCode)
+
+println("ToString:" + emp2)
 /**
   *Sample output
   *
@@ -123,5 +138,10 @@ Department:Computer Science
 Full Name:Alan Turing, Computer Science, Manager
 Copied Manager: Alan Turing, Toys, Manager-Encryption
 
+Object equality: true
+Object reference comparison:false
+Hashcode equality:true
+Hashcode:-1813557963
+ToString:Employee(Gabbar, Singh, Programmer)
 
   */

@@ -34,6 +34,29 @@ class Employee (@BeanProperty val firstName:String, @BeanProperty var lastName:S
   {
     new Employee(firstName,lastName, title)
   }
+  
+  override def equals(x:Any):Boolean =
+  {
+    if(! x.isInstanceOf[Employee]) false
+    else 
+    {
+        val other = x.asInstanceOf[Employee]
+        other.firstName == this.firstName &&
+        other.lastName == this.lastName &&
+        other.title == this.title
+    }
+  }
+  
+  override def hashCode:Int=
+  {
+    var result = 19
+    result = 31 * result + firstName.hashCode
+    result = 31 * result + lastName.hashCode
+    result = 31 * result + title.hashCode
+    result
+  }
+  
+  override def toString = s"Employee($firstName, $lastName, $title)"
 }
 
 class Department(val name:String)
