@@ -11,7 +11,7 @@ println(empCpl)
 println(empCpl.swap)
 
 /**
-    Sample Output
+    Sample Output 
 scala -nc CoupleScript.scala
 Pi value is: 3.14
 Couple(Employee(Johnny, English, Programmer),Employee(James, Bond, Programmer))

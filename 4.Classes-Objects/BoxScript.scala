@@ -19,7 +19,7 @@ val cplIntStringBox:Box[Couple[Int, String]] = intBox4.coupleWith("Scala")
 println(cplIntStringBox.t.first)
 println(cplIntStringBox.t.second)
                          
-/**
+/** 
     Sample output
 scala -nc BoxScript.scala
 3.14
