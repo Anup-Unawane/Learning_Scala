@@ -37,3 +37,62 @@ object FoldAndReduce extends App
     println("(1 to 10).foldLeft(0)(_ + _) : " + (1 to 10).foldLeft(0)(_ + _))
     println("(1 to 10).mkString(\",\") : " + (1 to 10).mkString(","))
 }
+
+/***
+    Sample Output
+Total: 0, Next:1
+Total: 1, Next:2
+Total: 3, Next:3
+Total: 6, Next:4
+Total: 10, Next:5
+Total: 15, Next:6
+Total: 21, Next:7
+Total: 28, Next:8
+Total: 36, Next:9
+Total: 45, Next:10
+foldLeftRes: 55
+
+
+Total: 1, Next:2
+Total: 3, Next:3
+Total: 6, Next:4
+Total: 10, Next:5
+Total: 15, Next:6
+Total: 21, Next:7
+Total: 28, Next:8
+Total: 36, Next:9
+Total: 45, Next:10
+reduceLeftRes: 55
+
+
+Total: 0, Next:10
+Total: 10, Next:9
+Total: 19, Next:8
+Total: 27, Next:7
+Total: 34, Next:6
+Total: 40, Next:5
+Total: 45, Next:4
+Total: 49, Next:3
+Total: 52, Next:2
+Total: 54, Next:1
+foldRightRes: 55
+
+
+Total: 10, Next:9
+Total: 19, Next:8
+Total: 27, Next:7
+Total: 34, Next:6
+Total: 40, Next:5
+Total: 45, Next:4
+Total: 49, Next:3
+Total: 52, Next:2
+Total: 54, Next:1
+reduceRightRes: 55
+
+
+(1 to 10).sum : 55
+(1 to 10).product : 3628800
+(1 to 10).foldLeft(0)(_ + _) : 55
+(1 to 10).mkString(",") : 1,2,3,4,5,6,7,8,9,10
+
+**/
